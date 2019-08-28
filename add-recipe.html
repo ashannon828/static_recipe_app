@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a>View Recipes</a></li>
+            <li><a href="/add-recipe.html">Add Recipe</a></li>
+            <!-- <li><a>Meal Plan</a></li> -->
+        </ul>
+    </nav>
+    <h1>Welcome to Static Recipe App</h1>
+    <h2>Add A Recipe</h2>
+    <form id="add-recipe-form">
+        Name: <input id="recipe-name-entry" type="text" placeholder="Enter Recipe Name">
+        Tags: <input id="recipe-tags-entry" type="text" placeholder="Enter comma separated list of tags">
+        <fieldset id="meta-entry">
+            <label>Meta Data</label>
+            Serves: <input id="serves-entry" type="text">
+            Cooking Duration: <input id="cooks-in-entry" type="text">
+            Difficulty: <input id="difficulty-entry" type="text">
+        </fieldset>
+        <fieldset id="ingredient-entry">
+            <label>Add Ingredient</label>
+            <button>+</button>
+            <ul id="ingredient-list">
+
+            </ul>
+        </fieldset>
+        <fieldset id="step-entry">
+            <label>Add Step</label>
+            <button>+</button>
+            <ul id="step-list">
+
+            </ul>
+        </fieldset>
+        <button>Submit</button>
+    </form>
+    <script src="/JavaScript/uuidv4.js"></script>
+    <script src="/JavaScript/form-entry.js"></script>
+</body>
+</html>
