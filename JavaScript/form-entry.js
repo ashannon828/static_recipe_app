@@ -9,11 +9,25 @@ const serves = document.querySelector('#serves-entry')
 const cooksIn = document.querySelector('#cooks-in-entry')
 const difficulty = document.querySelector('#difficulty-entry')
 
+const ingredients = document.querySelector('#ingredient-list')
+const steps = document.querySelector('#step-list')
+
+
 let recipes = getSavedRecipes()
+
+
+document.querySelector('#add-ingredient').addEventListener('click', () => {
+    ingredients.appendChild(renderIngredient())
+})
+
+document.querySelector('#add-step').addEventListener('click', () => {
+    console.log('step added')
+})
 
 
 recipeForm.addEventListener('submit', (e) => {
     e.preventDefault()
+
     const newRecipe = {
         id: uuidv4(),
         name: e.target.elements.name.value,

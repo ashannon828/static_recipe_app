@@ -18,29 +18,29 @@
     <h1>Welcome to Static Recipe App</h1>
     <h2>Add A Recipe</h2>
     <form id="add-recipe-form">
-        Name: <input id="recipe-name-entry" type="text" placeholder="Enter Recipe Name" name='name'>
+        Name: <input required id="recipe-name-entry" type="text" placeholder="Enter Recipe Name" name='name'>
         Tags: <input id="recipe-tags-entry" type="text" placeholder="Enter comma separated list of tags" name="tags">
         <fieldset id="meta-entry">
             <label>Meta Data</label>
-            Serves: <input id="serves-entry" type="text" name="serves">
-            Cooking Duration: <input id="cooks-in-entry" type="text" name="cooksIn">
-            Difficulty: <input id="difficulty-entry" type="text" name="difficulty">
+            Serves: <input required id="serves-entry" type="text" name="serves">
+            Cooking Duration: <input required id="cooks-in-entry" type="text" name="cooksIn">
+            Difficulty: <input required id="difficulty-entry" type="text" name="difficulty">
         </fieldset>
         <fieldset id="ingredient-entry">
             <label>Add Ingredient</label>
-            <button>+</button>
+            <button id="add-ingredient" type="button">+</button>
             <ul id="ingredient-list">
 
             </ul>
         </fieldset>
         <fieldset id="step-entry">
             <label>Add Step</label>
-            <button>+</button>
+            <button id="add-step" type="button">+</button>
             <ul id="step-list">
-
+                
             </ul>
         </fieldset>
-        <button type="submit">Add Recipe</button>
+        <button type="submit" name="addRecipe">Add Recipe</button>
     </form>
     <script type="text/javascript" src="/JavaScript/uuidv4.js"></script>
     <script type="text/javascript" src="/JavaScript/recipe-functions.js"></script>
