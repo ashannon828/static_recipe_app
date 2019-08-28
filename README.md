@@ -1,1 +1,2 @@
-# static_recipe_app
+# A Static Practice App
+### Can add recipes and browse recipes.
