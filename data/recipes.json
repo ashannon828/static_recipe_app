@@ -1,1 +1,94 @@
-[{"name":"A Recipe","tags":[],"meta":{"serves":"test","cooksIn":"20","difficulty":"hard"},"ingredients":[],"instructions":[]}]
+[{
+	"id": "ac34cf3b-fec4-457f-8232-96ac4c08ac5f",
+	"name": "Epic rib-eye steak",
+	"tags": ["GLUTEN-FREE", "DAIRY-FREE"],
+	"meta": {
+		"serves": "4",
+		"cooksIn": "26",
+		"difficulty": "not too tricky"
+	},
+	"ingredients": [{
+		"name": "rib-eye steak",
+		"quantity": "600",
+		"unit": "g"
+	}, {
+		"name": "sprigs of fresh rosemary",
+		"quantity": "4",
+		"unit": "unit(s)"
+	}, {
+		"name": "cloves of garlic",
+		"quantity": "4",
+		"unit": "unit(s)"
+	}, {
+		"name": "mixed mushrooms",
+		"quantity": "350",
+		"unit": "g"
+	}, {
+		"name": "jar of quality white beans",
+		"quantity": "600",
+		"unit": "g"
+	}],
+	"instructions": ["Place a large non-stick frying pan on a medium-high heat", "Rub the steak all over with a pinch of sea salt and black pepper, then sear on all sides for 10 minutes in total, so you achieve good colour on the outside but keep it medium rare in the middle, or cook to your liking, turning regularly with tongs", "Meanwhile, strip the rosemary leaves off the sprigs, peel and finely slice the garlic, and tear up any larger mushrooms", "When the steak’s done, remove to a plate and cover with tin foil.", "Reduce the heat under the pan to medium, and crisp up the rosemary for 30 seconds, then add the garlic and mushrooms and cook for 8 minutes, or until golden, tossing regularly", "Pour in the beans and their juice, add 1 tablespoon of red wine vinegar and simmer for 5 minutes, then season to perfection", "Sit the steak on top and pour over any resting juices. Slice and serve at the table, finishing with a little extra virgin olive oil, if you like"]
+}, {
+	"id": "b1710b55-a027-40fb-9fe3-9f80d1f33755",
+	"name": "Simple cheese omelette",
+	"tags": ["GLUTEN-FREE", " VEGETARIAN"],
+	"meta": {
+		"serves": "1",
+		"cooksIn": "10",
+		"difficulty": "super easy"
+	},
+	"ingredients": [{
+		"name": "eggs",
+		"quantity": "2",
+		"unit": "unit(s)"
+	}, {
+		"name": "olive oil",
+		"quantity": "2",
+		"unit": "tablespoon"
+	}, {
+		"name": "Cheddar cheese",
+		"quantity": "10",
+		"unit": "g"
+	}],
+	"instructions": ["Crack the eggs into a mixing bowl, season with a pinch of sea salt and black pepper, then beat well with a fork until fully combined.", "Place a small non-stick frying pan on a low heat to warm up", "Grate the cheese onto a board and set aside", "Add ½ tablespoon of oil to the hot pan, then carefully pour in the eggs", "Tilt the pan to spread them out evenly, using a fork to swirl the eggs around the pan a little", "When the omelette begins to cook and firm up, but still has a little raw egg on top, sprinkle over the cheese", "Using a spatula, ease around the edges of the omelette, then fold it over in half.", "When it starts to turn golden brown underneath, remove the pan from the heat and slide the omelette onto a plate. Delicious with a tomato salad and wholemeal bread"]
+}, {
+	"id": "222a7a4f-83fa-49f6-b82f-dd8a98d1656b",
+	"name": "Potato & chorizo breakfast hash",
+	"tags": ["DAIRY-FREE", " GLUTEN-FREE"],
+	"meta": {
+		"serves": "2",
+		"cooksIn": "20",
+		"difficulty": "super easy"
+	},
+	"ingredients": [{
+		"name": "onion",
+		"quantity": "200g",
+		"unit": "g"
+	}, {
+		"name": "clove of garlic",
+		"quantity": "1",
+		"unit": "unit(s)"
+	}, {
+		"name": "quality chorizo",
+		"quantity": "120",
+		"unit": "g"
+	}, {
+		"name": "cooked potatoes",
+		"quantity": "2-3",
+		"unit": "unit(s)"
+	}, {
+		"name": "bunch of fresh flat-leaf parsley",
+		"quantity": "1/2",
+		"unit": "unit(s)"
+	}, {
+		"name": "olive oil",
+		"quantity": "2",
+		"unit": "tablespoon"
+	}, {
+		"name": "eggs",
+		"quantity": "2",
+		"unit": "unit(s)"
+	}],
+	"instructions": ["Preheat the oven to 180ºC/gas 4.", "Peel and finely chop the onion and garlic, chop the chorizo, dice up the cooked potato and pick and finely chop the parsley.", "Gently fry the onion and garlic in a little oil in an ovenproof pan until the onion is soft. Add the chorizo and fry for 2 to 3 minutes.", "Add the potatoes and cook for 5 minutes more, then crack the eggs on top.", "Transfer the pan to the preheated oven and bake for 8 minutes, or until the egg white is set but the yolk is still runny.", "Sprinkle with sea salt, black pepper and the parsley, to serve."]
+}]

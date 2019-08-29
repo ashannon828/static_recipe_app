@@ -12,7 +12,6 @@ const difficulty = document.querySelector('#difficulty-entry')
 const ingredients = document.querySelector('#ingredient-list')
 const steps = document.querySelector('#step-list')
 
-
 let recipes = getSavedRecipes()
 
 
@@ -21,7 +20,7 @@ document.querySelector('#add-ingredient').addEventListener('click', () => {
 })
 
 document.querySelector('#add-step').addEventListener('click', () => {
-    console.log('step added')
+    steps.appendChild(renderStep())
 })
 
 
@@ -36,8 +35,8 @@ recipeForm.addEventListener('submit', (e) => {
             serves: e.target.elements.serves.value,
             cooksIn: e.target.elements.cooksIn.value, 
             difficulty: e.target.elements.difficulty.value},
-        ingredients: [],
-        instructions: []
+        ingredients: getIngredients(ingredients.childNodes),
+        instructions: getSteps(steps.childNodes)
     }
     
     recipes.push(newRecipe)

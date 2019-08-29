@@ -31,7 +31,6 @@ const renderIngredient = () => {
     const removeIngredient = document.createElement('button')
     removeIngredient.setAttribute('type', 'button')
     removeIngredient.textContent = '-'
-
     removeIngredient.addEventListener('click', (e) => {
         const li = e.target.parentNode
         const ul = li.parentNode
@@ -42,22 +41,52 @@ const renderIngredient = () => {
     li.appendChild(quantity)
     li.appendChild(select)
     li.appendChild(removeIngredient)
-    
     return li
 }
 
+const getIngredients = (children) => {
+    const ingredients = []
+    for (let i = 1; i < children.length; i++ ) {
+        // ingredients.push({
+        //     children[i].childNodes[0].value
+        // })
+        children[i].childNodes
+        ingredients.push({
+            name:children[i].childNodes[0].value,
+            quantity:children[i].childNodes[1].value,
+            unit: children[i].childNodes[2].value
+        })
+    
+    }
+    return ingredients
+}
 
-// // Read existing notes
-// const getSavedNotes =  () => {
-//     const notesJSON = localStorage.getItem('notes')
-//     try {
-//         return notesJSON ? JSON.parse(notesJSON) : []
-//     } catch(e){
-//         return []
-//     }
-// }
+const renderStep = () => {
+    const li = document.createElement('li')
+    
+    const step = document.createElement('textarea')
+    step.setAttribute('placeholder', 'Enter Step')
+    step.setAttribute('name', 'step')
 
-// // save notes
-// const saveNotes = (notes) => {
-//     localStorage.setItem('notes', JSON.stringify(notes))
-// }
+    const removeStep = document.createElement('button')
+    removeStep.setAttribute('type', 'button')
+    removeStep.textContent = '-'
+
+    removeStep.addEventListener('click', (e) => {
+        const li = e.target.parentNode
+        const ul = li.parentNode
+        ul.removeChild(li)
+    })
+
+    li.appendChild(step)
+    li.appendChild(removeStep)
+    return li
+}
+
+const getSteps = (children) => {
+    const steps = []
+    for (let i = 1; i < children.length; i++ ) {
+        steps.push(children[i].childNodes[0].value)
+    }
+    return steps
+}
