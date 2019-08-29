@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Recipe Browser</title>
+    <title>Document</title>
 </head>
 <body>
     <nav>
@@ -14,15 +14,17 @@
             <li><a href="#">Meal Plan</a></li>
         </ul>
     </nav>
-    <h1>Welcome to Static Recipe App</h1>
-    <p>All of our recipes are taken from Jamie Oliver XD</p>
-    <section id="index-container">
-            <h2>Recipes</h2>
-
+    <section id="recipe-view">
+        <h2 id="recipe-name"></h2>
+        <img id="recipe-img">
+        <p id="recipe-tags"></p>
+        <p id="recipe-meta"></p>
+        <h4>Ingredients</h4>
+        <ul id="ingredients"></ul>
+        <h4>Steps</h4>
+        <ol id="steps"></ol>
     </section>
-    
-    <script type="text/javascript" src="/JavaScript/uuidv4.js"></script>
     <script type="text/javascript" src="/JavaScript/recipe-functions.js"></script>
-    <script type="text/javascript" src="/JavaScript/recipe-index.js"></script>
+    <script type="text/javascript" src="/JavaScript/render-recipe.js"></script>
 </body>
 </html>

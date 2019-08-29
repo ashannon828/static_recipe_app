@@ -16,11 +16,11 @@ let recipes = getSavedRecipes()
 
 
 document.querySelector('#add-ingredient').addEventListener('click', () => {
-    ingredients.appendChild(renderIngredient())
+    ingredients.appendChild(renderAddIngredient())
 })
 
 document.querySelector('#add-step').addEventListener('click', () => {
-    steps.appendChild(renderStep())
+    steps.appendChild(renderAddStep())
 })
 
 

@@ -9,16 +9,17 @@ const saveRecipes = () => {
     localStorage.setItem('recipes', JSON.stringify(recipes))
 }
 
-const renderIngredient = () => {
-    const li = document.createElement('li')
-    
-    const ingredient = document.createElement('input')
-    ingredient.setAttribute('type', 'text')
-    ingredient.setAttribute('placeholder', 'Enter Ingredient')
+const renderInputField = (placeholder) => {
+    const el = document.createElement('input')
+    el.setAttribute('type', 'text')
+    el.setAttribute('placeholder', placeholder)
+    return el
+}
 
-    const quantity = document.createElement('input')
-    quantity.setAttribute('type', 'text')
-    quantity.setAttribute('placeholder', 'Enter Quantity')
+const renderAddIngredient = () => {
+    const li = document.createElement('li')
+    const ingredient = renderInputField('Enter Ingredient')
+    const quantity = renderInputField('Enter Quantity')
 
     const units = ['g', 'kg', 'ml', 'l', 'mm', 'cm', 'teaspoon', 'tablespoon', 'unit(s)']
     const select = document.createElement('select');
@@ -47,9 +48,6 @@ const renderIngredient = () => {
 const getIngredients = (children) => {
     const ingredients = []
     for (let i = 1; i < children.length; i++ ) {
-        // ingredients.push({
-        //     children[i].childNodes[0].value
-        // })
         children[i].childNodes
         ingredients.push({
             name:children[i].childNodes[0].value,
@@ -61,7 +59,7 @@ const getIngredients = (children) => {
     return ingredients
 }
 
-const renderStep = () => {
+const renderAddStep = () => {
     const li = document.createElement('li')
     
     const step = document.createElement('textarea')
@@ -89,4 +87,55 @@ const getSteps = (children) => {
         steps.push(children[i].childNodes[0].value)
     }
     return steps
+}
+
+const tagFormat = (tags) => {
+    let t = tags.map(s => s.trim())
+    return `${t.join(' | ')}`
+}
+
+const renderTags = (tags) => {
+    const p = document.createElement('p')
+    p.textContent = tagFormat(tags)
+    return p
+}
+
+const metaFormat = (meta) => {
+    return `Serves: ${meta.serves} | Cooking Time: ${meta.cooksIn} | Difficulty: ${meta.difficulty.toUpperCase()}`
+}
+
+const renderMeta = (meta) => {
+    const p = document.createElement('p')
+    p.textContent = metaFormat(meta)
+    return p
+}
+
+const renderRecipeIndex = (recipes) => {
+    for (let i = 0; i < recipes.length; i++) {
+        const recipeContainer = document.createElement('div')
+        const recipeEl = document.createElement('h3')
+        
+        const a = document.createElement('a')
+        a.textContent = recipes[i].name
+        a.setAttribute('href', `recipe.html#${encodeURL(recipes[i].name)}`)
+        recipeEl.appendChild(a)
+        
+        const tags = renderTags(recipes[i].tags)
+
+        const meta = renderMeta(recipes[i].meta)
+
+        recipeContainer.appendChild(recipeEl)
+        recipeContainer.appendChild(tags)
+        recipeContainer.appendChild(meta)
+        recipeIndexContainer.appendChild(recipeContainer)
+    }
+}
+
+const encodeURL = (recipeName) => {
+    //trim and replace spaces with -
+    return recipeName.toLowerCase().replace(/\s/g, '_')
+}
+
+const decodeURL = (recipeURL) => {
+    return recipeURL.replace(/_/g, ' ')
 }
