@@ -1,5 +1,12 @@
 const recipeIndexContainer = document.querySelector('#index-container')
 
-let recipes = getSavedRecipes()
+// let recipes = getSavedRecipes()
 
-renderRecipeIndex(recipes)
+
+
+const renderRecipes = async () => {
+    const recipes = await getJsonRecipes()
+    renderRecipeIndex(recipes)
+}
+
+renderRecipes()

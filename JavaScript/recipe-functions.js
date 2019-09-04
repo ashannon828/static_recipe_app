@@ -5,6 +5,14 @@ const getSavedRecipes = () => {
     return recipeJSON ? JSON.parse(recipeJSON) : []
 }
 
+const getJsonRecipes = async () => {
+    const response = await fetch('../data/recipes.json')
+    if (response.status === 200) {
+        const data = await response.json()
+        return data
+    }
+}
+
 const saveRecipes = () => {
     localStorage.setItem('recipes', JSON.stringify(recipes))
 }
